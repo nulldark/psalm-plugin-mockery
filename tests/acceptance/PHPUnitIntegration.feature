@@ -4,7 +4,7 @@ Feature: PHPUnitIntegration
     Given I have the following config
       """
       <?xml version="1.0"?>
-      <psalm errorLevel="1">
+      <psalm errorLevel="1" findUnusedCode="false">
         <projectFiles>
           <directory name="."/>
           <ignoreFiles> <directory name="../../vendor"/> </ignoreFiles>
@@ -40,6 +40,6 @@ Feature: PHPUnitIntegration
           }
       }
       """
-    And I have the "mockery/mockery" package satisfying the "^1.0"
+    And I have the "mockery/mockery" package satisfying the "^2.0.x-dev"
     When I run Psalm
     Then I see no errors

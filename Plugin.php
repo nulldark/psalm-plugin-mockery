@@ -6,6 +6,9 @@ use SimpleXMLElement;
 use Psalm\Plugin\PluginEntryPointInterface;
 use Psalm\Plugin\RegistrationInterface;
 
+/**
+ * @psalm-api
+ */
 class Plugin implements PluginEntryPointInterface
 {
     public function __invoke(RegistrationInterface $registration, SimpleXMLElement $config = null): void
